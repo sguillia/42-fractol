@@ -7,4 +7,4 @@ Some focused on beautiful fractals, other focused on mathematics, and I focused 
 
 The binary can be compiled with or without OpenCL and thus can still run in CPU mode.
 
-[ pictures will come soon ! ]
+[ pictures will come soon ]
