@@ -7,4 +7,6 @@ Some students focused on making beautiful fractals, other focused on mathematics
 
 The binary can be compiled with or without OpenCL and thus can still run in CPU mode.
 
+Requires minilibx - see mlx folder
+
 [ pictures will come soon ]

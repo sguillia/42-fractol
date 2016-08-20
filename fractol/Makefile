@@ -60,11 +60,11 @@ SRC = \
 
 O_FILES = $(SRC:.c=.o)
 
-MLX_LIB = -L/usr/local/lib -lmlx -framework OpenGL -framework Appkit
+MLX_LIB = -L/usr/local/lib -lmlx -L. -L../mlx -framework OpenGL -framework Appkit
 MLX_I   = -I/usr/local/include
 
 LIBFT_L = -Llibft -lft
-LIBFT_I = -Ilibft
+LIBFT_I = -Ilibft -I. -I../mlx
 
 # Enables precision double output
 PRECISION = -DPRECISION
