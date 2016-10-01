@@ -9,4 +9,8 @@ The binary can be compiled with or without OpenCL and thus can still run in CPU 
 
 Requires minilibx - see mlx folder
 
-[ pictures will come soon ]
+![img](Photos_fractol/mandelbrot1.png)
+![img](Photos_fractol/mandelbrot2.png)
+![img](Photos_fractol/mandelbrot3.png)
+![img](Photos_fractol/mandelbrot4.png)
+![img](Photos_fractol/newton.png)
