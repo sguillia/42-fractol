@@ -147,5 +147,5 @@ __kernel void iterate(
 			color = color6(ret, itermax);
 			break ;
 	}
-	((unsigned int*)output)[id] = color;
+	((__global unsigned int*)output)[id] = color;
 }

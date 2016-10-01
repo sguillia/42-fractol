@@ -6,7 +6,7 @@
 /*   By: sguillia <sguillia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/16 20:11:24 by sguillia          #+#    #+#             */
-/*   Updated: 2016/02/19 22:30:44 by sguillia         ###   ########.fr       */
+/*   Updated: 2016/10/01 23:56:28 by sguillia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	try_opencl_init_next(t_cl *cl)
 	char		buffer[10000];
 	size_t		len;
 
-	cl->err = clBuildProgram(cl->program, 0, NULL, NULL, NULL, NULL);
+	cl->err = clBuildProgram(cl->program, 0, NULL, "-I.", NULL, NULL);
 	if (cl->err != CL_SUCCESS)
 	{
 		cl->err = clGetProgramBuildInfo(cl->program, cl->device_id,
@@ -49,7 +49,7 @@ static int	try_opencl_init(t_mlx *e)
 	t_cl		*cl;
 
 	cl = &(e->cl);
-	cl->err = clGetDeviceIDs(NULL, CL_DEVICE_TYPE_CPU, 1, &cl->device_id, NULL);
+	cl->err = clGetDeviceIDs(NULL, CL_DEVICE_TYPE_GPU, 1, &cl->device_id, NULL);
 	if (cl->err != CL_SUCCESS)
 		return (-1);
 	cl->context = clCreateContext(0, 1, &cl->device_id, NULL, NULL, &cl->err);
